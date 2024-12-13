@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Sofia Sans";
+    src: url("/fonts/SofiaSans-VariableFont_wght.ttf") format('ttf');
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+body {        
+    background-color: #F8D080;
+    margin: 0;                           /* Внешний отступ на всех четырех сторонах элнмента */
+    padding: 0;                          /* Внутренние отступы/поля на всех четырех сторонах элнмента */                                      
+    font-family: "Sofia Sans";               /* Шрифт 'Sofia Sans' */
+    line-height: 1.6;                                /* Высота строки */
+}
+footer {
+    font-family: "Sofia Sans"; 
+    text-align: center;
+    padding: 1rem 0;
+    background: #502000;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+}
+header {
+    font-family: "Sofia Sans"; 
+    background-color: #502000;                 /* Фон */
+    color: #ffffff;                      /* Текст */
+    padding: 1rem 0;                    /* Вертикальные отступы по 1rem сверху и снизу */
+    text-align: center;
+}
+h1, h2 {
+    font-family: "Sofia Sans";
+    margin: 10px 30px 10px 30px;
+}
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;      /* Отступы между колонками и рядами */
+}
+.product {
+    background-color: #F8D080;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 20px 20px 30px;
+    box-shadow: 0 4px 8px black;     /* Тень для контейнера */
+    width: 200px;
+    text-align: center;
+    justify-content: left;
+
+}
+#productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Центрируем товары */
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.button {
+    font-family: "Sofia Sans"; 
+    background-color: #C86808; 
+    border: none;                   
+    color: #ffffff;
+    padding: 15px 32px;
+    margin: 20px 0 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #eea620;   /* Изменяем цвет кнопки при наведении */
+    color: black;               /* Цвет текста кнопки при наведении */
+}
+@media (min-width: 768px) {
+    #productContainer {
+        flex-direction: row;        /* Строка для больших экранов */
+    }
+    .product {
+        flex: 0 1 calc(20% - 20px);   /* Каждая карточка занимает 20% ширины (5 товаров в строке) */
+    }
+}
+@media (max-width: 767px) {
+    .button {
+        justify-content: center;       /* Центрируем по горизонтали */
+        margin: 10px 10px 30px 20px;
+        text-align: center;
+        font-size: 14px;
+        width: calc(46% - 20px);
+    }
+    .button:nth-child(even) {
+        margin-right: 0;               /* Убираем отступ справа у последней кнопки в ряду */
+    }
+    #productContainer {
+        justify-content: center; /* Центрируем товары */
+        text-align: center;
+        flex-direction: column; /* Столбик для мобильных устройств */
+    }
+    .product {
+        justify-content: center;
+        text-align: center;
+        width: 70%;            /* Ширина карточки на мобильном устройстве */
+    }
+}
+

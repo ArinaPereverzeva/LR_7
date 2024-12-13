@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon.jpeg">          <!-- Иконка сайта -->
+    <title>ЛР №7</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин "Преображение"</h1>
+        <h4>Здесь ты найдешь все, что тебе нужно! Выбирай товары по категориям</h4>
+    </header>  
+    <main>
+        <h1>Выберите категорию товаров</h1>
+        <button onclick="fetchProducts('womens-watches')" class="button">Женские часы</button>
+        <button onclick="fetchProducts('womens-bags')" class="button">Женские сумки</button>
+        <button onclick="fetchProducts('womens-dresses')" class="button">Женские платья</button>
+        <button onclick="fetchProducts('beauty')" class="button">Декоративная косметика</button>
+        <button onclick="fetchProducts('skin-care')" class="button">Уход за кожей</button>
+        <button onclick="fetchAllProducts()" class="button">Bce товары для женщин</button> <!-- Кнопка для всех товаров -->
+
+        <div id="productContainer"></div>
+    </main>
+    <footer>
+        <p>2024 Магазин "Преображение"</p>
+        <h4>Контакты: </h4>
+        <p><a href="https://t.me/arina_perv">Telegram</a></p>
+        <p><a href="http://www.instagram.com/ar_pereverzeva">Instagram</a></p>
+        <p><a href="https://wa.me/79132339285">WhatsApp</a></p>
+    </footer>
+
+    <script src="js/product.js"></script>
+
+</body>
+</html>
+
